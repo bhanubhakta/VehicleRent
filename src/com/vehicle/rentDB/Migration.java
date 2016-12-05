@@ -14,7 +14,29 @@ public class Migration {
 		Statement st = null;
 		try {
 			st = (Statement) connection.createStatement();
-			String sql = "CREATE TABLE Users(LastName varchar(255),FirstName varchar(255),Address varchar(255),Phone int, isAdmin int);";
+			createUserTable(st);
+			createVehicle(st);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static void createUserTable(Statement st) {
+		String sql = "CREATE TABLE IF NOT EXISTS Users(LastName varchar(255),FirstName varchar(255),Address varchar(255),Phone int, isAdmin int);";
+
+		try {
+			st.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static void createVehicle(Statement st) {
+		String sql = "CREATE TABLE IF NOT EXISTS Vehicle(make int,modelNo int,regNo int,color varchar(255), rented int, price int);";
+
+		try {
 			st.executeUpdate(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
