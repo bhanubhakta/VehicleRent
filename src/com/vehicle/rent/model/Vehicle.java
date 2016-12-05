@@ -6,6 +6,8 @@ public abstract class Vehicle {
 	private int modelNo;
 	private int regNo;
 	private String color;
+	private int rented;
+	private double price;
 
 //	private Vehicle() {
 //
