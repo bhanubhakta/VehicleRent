@@ -11,6 +11,7 @@ public class User {
 	private String lastName;
 	private int phoneNo;
 	private String address;
+	private int isAdmin;
 
 	private User() {
 
@@ -22,6 +23,10 @@ public class User {
 
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public void setIsAdmin(int isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 
 	public String getLastName() {
@@ -54,8 +59,8 @@ public class User {
 
 	public void register() {
 		String sql = String.format(
-				"INSERT INTO users(lastName, firstName, Address, Phone) values ('%s', '%s', '%s', '%d');", lastName,
-				firstName, address, phoneNo);
+				"INSERT INTO users(lastName, firstName, Address, Phone, isAdmin) values ('%s', '%s', '%s', '%d', '%d');", lastName,
+				firstName, address, phoneNo, isAdmin);
 		DBConnection dc = new DBConnection();
 		Connection c = dc.getConnection();
 		Statement st = null;

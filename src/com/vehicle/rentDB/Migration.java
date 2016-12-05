@@ -14,7 +14,7 @@ public class Migration {
 		Statement st = null;
 		try {
 			st = (Statement) connection.createStatement();
-			String sql = "CREATE TABLE Users(LastName varchar(255),FirstName varchar(255),Address varchar(255),Phone int);";
+			String sql = "CREATE TABLE Users(LastName varchar(255),FirstName varchar(255),Address varchar(255),Phone int, isAdmin int);";
 			st.executeUpdate(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
