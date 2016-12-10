@@ -4,11 +4,11 @@ package com.vehicle.rent.connectDB;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
+
 
 public class DBConnection {
 	public static Connection DBConnection;
-	private String url = "jdbc:mysql://localhost:3306/vehicle_rent";
+	private String url = "jdbc:mysql://localhost:3309/vehicle_rent";
 	private String user = "root";
 	private String password = "";
 

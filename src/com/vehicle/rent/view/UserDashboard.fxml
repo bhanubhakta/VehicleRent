@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <MenuBar layoutX="94.0" layoutY="86.0" prefWidth="531.0">
+      <menus>
+        <Menu id="vehicleTypeMenu" mnemonicParsing="false" text="Vehicle Type" fx:id="vehicleTypeMenu">
+          <items>
+            <MenuItem id="CarMenuItem" mnemonicParsing="false" text="Car" />
+            <MenuItem id="TruckMenuItem" mnemonicParsing="false" text="Truck" />
+            <MenuItem id="BikeMenuItem" mnemonicParsing="false" text="Bike" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Account">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Logout">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Pane id="vehicleListPane" focusTraversable="false" layoutX="94.0" layoutY="116.0" opacity="1.0" prefHeight="433.0" prefWidth="531.0" />
+    <ListView id="vehicleList" layoutX="94.0" layoutY="116.0" prefHeight="408.0" prefWidth="531.0" />
+  </children>
+</AnchorPane>
